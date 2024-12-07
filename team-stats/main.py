@@ -169,7 +169,7 @@ client = bigquery.Client()
 query = """
 SELECT `クラブ名`, GP,W,L,`WIN%`,PTS, `3PM`, `3PA`, `3P%`, `2PM`, `2PA`, `2P%`, 
 FTM, FTA, `FT%`, PF, OREB, DREB, REB, TOV, AST, STL, BLK,
-FROM `basketball-ana.B3.latest_clubstats_tbl` order by `WIN%` DESC
+FROM `xxxxxxxxxx` order by `WIN%` DESC
 """
 df = client.query(query).to_dataframe()
 df["クラブ名"] = df["クラブ名"].apply(change_name)
