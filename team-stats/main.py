@@ -112,7 +112,7 @@ def sending_mail(bucket_name, blob_name):
 
     # OAuth 2.0の認証
     flow = InstalledAppFlow.from_client_secrets_file(
-        '/root/client_secret_866796874796-sgdo96p7f8g30t3q69q5kuvdfamqd2s3.apps.googleusercontent.com.json', SCOPES
+        '/root/xxxx.json', SCOPES
     )
     credentials = flow.run_local_server(port=0)
 
@@ -132,7 +132,7 @@ def sending_mail(bucket_name, blob_name):
         </body>
         </html>
     """, "html")
-    message['to'] = 'ryuryu1117.p@gmail.com'
+    message['to'] = 'xxxxx'
     message['subject'] = "B3リーグスタッツ"
 
     # メールをエンコードして送信
